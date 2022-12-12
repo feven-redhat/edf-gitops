@@ -79,15 +79,56 @@ spec:
       requests:
         cpu: 250m
         memory: 1024Mi
-  resourceExclusions: |
+  resourceExclusions:
     - apiGroups:
       - tekton.dev
       clusters:
       - '*'
       kinds:
       - TaskRun
-      - PipelineRun        
+      - PipelineRun
+EOF  
 ```
+```shell
+oc apply -f argocd.yaml
+```
+
+You can now get the access to argo cd by the routes and then use openshift login 
+```shell
+oc get route -n argocd
+```
+
+### Connect to the github repo
+
+To generate a token in github go in https://github.com/settings/tokens and click on "Generate new token". Give a name select the expiration date and the scope. Once done scroll down and click "generate token" and copy your token. 
+
+```shell
+export GITHUB_TOKEN=<paste your token here>
+```
+
+Connect to the repository
+
+```shell
+cat <<EOF  >> private-repo-secret.yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: private-repo-secret
+  namespace: argocd
+  labels:
+    argocd.argoproj.io/secret-type: repository
+stringData:
+  url: https://github.com/RHTE-2023-Edge-Lab/rhte-gitops/
+  password: ${GITHUB_TOKEN}
+  username: not-used
+EOF
+```
+
+```shell
+oc apply -f private-repo-secret.yaml
+```
+
+
 
 
 
@@ -108,9 +149,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/RHTE-2023-Edge-Lab/
+    repoURL: https://github.com/RHTE-2023-Edge-Lab/rhte-gitops/
     targetRevision: HEAD
-    path: rhte-gitops/headquarter
+    path: headquarter
   destination: 
     server: https://kubernetes.default.svc
     namespace: headquarter
@@ -125,6 +166,7 @@ EOF
 ```shell
 oc apply -f application-argo.yaml
 ```
+
 
 
 ## Configure the Warehouse
