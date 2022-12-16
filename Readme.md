@@ -12,7 +12,6 @@ For the lab, everything will be deployed in the same cluster :
 Create an argoCD project
 ```shell
 oc apply -f headquarter/argocd/project.yaml
-EOF
 ```
 
 Create the argoCD Application
