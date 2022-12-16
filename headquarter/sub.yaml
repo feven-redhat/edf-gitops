@@ -12,7 +12,7 @@ spec:
   name: amq-broker-rhel8
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: amq-broker-operator.v7.8.1-opr-4-rhel8
+    #startingCSV: amq-broker-operator.v7.8.1-opr-4-rhel8
 ---
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
@@ -27,7 +27,7 @@ spec:
   name: web-terminal
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: web-terminal.v1.4.0
+    #startingCSV: web-terminal.v1.4.0
 ---
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
@@ -42,7 +42,7 @@ spec:
   name: camel-k
   source: community-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: camel-k-operator.v1.11.0
+    #startingCSV: camel-k-operator.v1.11.0
 ---
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
@@ -57,4 +57,4 @@ spec:
   name: amq-streams
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: amqstreams.v2.2.0-4
+    #startingCSV: amqstreams.v2.2.0-4
