@@ -25,7 +25,7 @@ oc apply -f headquarter/argocd/application.yaml
 
 Create an argoCD project
 ```shell
-oc apply -f warehoouse/argocd/project.yaml
+oc apply -f warehouse/argocd/project.yaml
 ```
 
 Create the argoCD ApplicationSet (as we are deploying 10 or more namespaces within the cluster)
