@@ -1,0 +1,8 @@
+kind: ActiveMQArtemisAddress
+apiVersion: broker.amq.io/v1beta1
+metadata:
+  name: address
+spec:
+  addressName: esp32
+  queueName: myQueue0
+  routingType: anycast

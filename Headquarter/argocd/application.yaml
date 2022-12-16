@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argo-application
+  name: headquarter
   namespace: argocd
 spec:
-  project: default
+  project: headquarter
   source:
-    repoURL: https://github.com/RHTE-2023-Edge-Lab/
+    repoURL: https://github.com/slallemand/rhte-2023-lab-deploy.git
     targetRevision: HEAD
-    path: rhte-gitops/headquarter
-  destination: 
-    server: https://kubernetes.default.svc
+    path: headquarter/
+  destination:
+    server: https://api.cluster-452z2.452z2.sandbox969.opentlc.com:6443
     namespace: headquarter
   syncPolicy:
     syncOptions:
