@@ -1,5 +1,11 @@
 # rhte-2023-lab-deploy
 
+This repo contains the material to deploy the headquarter and warehouse argoCD applications.
+For the lab, everything will be deployed in the same cluster :
+- headquarter will be deployed in the headquarter namespace
+- 10 warehouses namespaces are being deployed
+
+
 ## Configure the HeadQuarter
 
 
