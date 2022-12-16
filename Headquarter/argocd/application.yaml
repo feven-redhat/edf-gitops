@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: headquarter
+  name: Headquarter
   namespace: argocd
 spec:
   project: headquarter
   source:
-    repoURL: https://github.com/slallemand/rhte-2023-lab-deploy.git
-    targetRevision: HEAD
+    repoURL: https://github.com/RHTE-2023-Edge-Lab/rhte-gitops.git
+    targetRevision: slallemand-gitops
     path: headquarter/
   destination:
     server: https://api.cluster-452z2.452z2.sandbox969.opentlc.com:6443
