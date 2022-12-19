@@ -1,0 +1,19 @@
+apiVersion: camel.apache.org/v1
+kind: Integration
+metadata:
+  name: kafkaintegration
+  namespace: warehouse-01
+spec:
+  source:
+    uri: mqtt:source?brokerUrl=tcp://:a85c02bea72bc4614b6417b8b681a013-1563160643.us-east-2.elb.amazonaws.com:1883&topic=/esp32&clientId=camel-k&username=admin&password=public
+  sink:
+    uri: kafka:sink-scram?bootstrapServers=warehouse-paris-kafka-tls-bootstrap-warehouse-01.apps.cluster-grn4v.grn4v.sandbox1236.opentlc.com:443&user=camel&password=s3cr3t&topic=warehouse-in
+  transformations:
+  - setBody(e -> {
+      Map<String, Object> map = new HashMap<>();
+      map.put("id", e.getIn().getBody());
+      map.put("timestamp", new Date().getTime());
+      return map;
+    })
+  - marshal().json()
+
