@@ -4,3 +4,10 @@ resources:
 - broker.yaml
 - AMQaddress.yaml
 - svc-mqtt-loadbalancer.yaml
+- camel-secret.yaml
+- mirrormaker-secret.yaml
+- mirrormakeUser.yaml
+- topicKafka.yaml
+- camel-secret.yaml
+- kafka.yaml
+

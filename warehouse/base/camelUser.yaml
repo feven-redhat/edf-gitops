@@ -1,0 +1,15 @@
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  name: camel
+  labels:
+    strimzi.io/cluster: warehouse-paris
+spec:
+  authentication:
+    password:
+      valueFrom:
+        secretKeyRef:
+          name: camel-user
+          key: password
+    type: scram-sha-512

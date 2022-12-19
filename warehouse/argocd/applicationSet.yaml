@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: warehouse
-  namespace: argocd
+  namespace: openshift-gitops
 spec:
   generators:
   - list:
@@ -27,7 +27,7 @@ spec:
         targetRevision: slallemand-gitops
         path: warehouse/base
       destination:
-        server: https://api.cluster-452z2.452z2.sandbox969.opentlc.com:6443
+        server: https://kubernetes.default.svc
         namespace: '{{namespace}}'
       syncPolicy:
         syncOptions:
