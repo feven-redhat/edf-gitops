@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: headquarter
-  namespace: openshift-gitops
+  namespace: argocd
 spec:
   project: headquarter
   source:
@@ -10,7 +10,7 @@ spec:
     targetRevision: main
     path: headquarter/
   destination:
-    server: https://kubernetes.default.svc
+    server: https://api.cluster-dw5m6.dw5m6.sandbox1231.opentlc.com:6443
     namespace: headquarter
   syncPolicy:
     syncOptions:

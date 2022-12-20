@@ -1,7 +1,7 @@
 apiVersion: kafka.strimzi.io/v1beta2
 kind: Kafka
 metadata:
-  name: warehouse-paris
+  name: warehouse
 spec:
   kafka:
     config:
