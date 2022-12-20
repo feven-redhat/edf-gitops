@@ -2,18 +2,15 @@ apiVersion: camel.apache.org/v1
 kind: Integration
 metadata:
   name: kafkaintegration
-  namespace: warehouse-01
+  namespace: warehouse-02
 spec:
-  source:
-    uri: mqtt:source?brokerUrl=tcp://a83e486ef703a4944992a9f612b04fd3-2043435801.us-east-2.elb.amazonaws.com:1883&topic=/esp32&clientId=camel-k&username=admin&password=public
-  sink:
-    uri: kafka:sink-scram?bootstrapServers=ac16304d35de7409fa5c0bc98e868469-2050217402.us-east-2.elb.amazonaws.com:9093&user=camel&password=s3cr3t&topic=warehouse-in
-  transformations:
-  - setBody(e -> {
-      Map<String, Object> map = new HashMap<>();
-      map.put("id", e.getIn().getBody());
-      map.put("timestamp", new Date().getTime());
-      return map;
-    })
-  - marshal().json()
-
+  sources:
+  - content: |
+      from("kamelet:mqtt-source?brokerUrl=tcp://a83e486ef703a4944992a9f612b04fd3-2043435801.us-east-2.elb.amazonaws.com:1883&topic=esp32&clientId=camel-k&username=admin&password=public")
+      .convertBodyTo(String.class)
+      .setBody({ e -> [ id: e.in.body, timestamp: new Date().getTime() ] })
+      .marshal().json()
+      //.to("log:info")
+      .to("kamelet:kafka-sink-scram?bootstrapServers=ac16304d35de7409fa5c0bc98e868469-2050217402.us-east-2.elb.amazonaws.com:9093&user=camel&password=s3cr3t&topic=warehouse-in")
+    name: mqtt-kafka.groovy
+  traits: {}
