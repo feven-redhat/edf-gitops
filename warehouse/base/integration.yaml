@@ -5,9 +5,9 @@ metadata:
   namespace: warehouse-01
 spec:
   source:
-    uri: mqtt:source?brokerUrl=tcp://:a85c02bea72bc4614b6417b8b681a013-1563160643.us-east-2.elb.amazonaws.com:1883&topic=/esp32&clientId=camel-k&username=admin&password=public
+    uri: mqtt:source?brokerUrl=tcp://a83e486ef703a4944992a9f612b04fd3-2043435801.us-east-2.elb.amazonaws.com:1883&topic=/esp32&clientId=camel-k&username=admin&password=public
   sink:
-    uri: kafka:sink-scram?bootstrapServers=warehouse-paris-kafka-tls-bootstrap-warehouse-01.apps.cluster-grn4v.grn4v.sandbox1236.opentlc.com:443&user=camel&password=s3cr3t&topic=warehouse-in
+    uri: kafka:sink-scram?bootstrapServers=ac16304d35de7409fa5c0bc98e868469-2050217402.us-east-2.elb.amazonaws.com:9093&user=camel&password=s3cr3t&topic=warehouse-in
   transformations:
   - setBody(e -> {
       Map<String, Object> map = new HashMap<>();
