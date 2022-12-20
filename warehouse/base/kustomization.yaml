@@ -10,3 +10,5 @@ resources:
 - camel-secret.yaml
 - kafka.yaml
 - camelUser.yaml
+- kamelet.yaml
+- integration.yaml
