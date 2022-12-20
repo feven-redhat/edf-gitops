@@ -2,15 +2,15 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: headquarter
-  namespace: argocd
+  namespace: openshift-gitops
 spec:
   project: headquarter
   source:
     repoURL: https://github.com/RHTE-2023-Edge-Lab/rhte-gitops.git
-    targetRevision: main
+    targetRevision: slallemand/reorg-warehouse-manifests
     path: headquarter/
   destination:
-    server: https://api.cluster-dw5m6.dw5m6.sandbox1231.opentlc.com:6443
+    server: https://kubernetes.default.svc
     namespace: headquarter
   syncPolicy:
     syncOptions:
@@ -18,3 +18,6 @@ spec:
     automated:
       selfHeal: true
       prune: true
+    managedNamespaceMetadata:
+      labels:
+        argocd.argoproj.io/managed-by: openshift-gitops
