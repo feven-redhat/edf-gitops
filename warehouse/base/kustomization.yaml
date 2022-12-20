@@ -9,4 +9,4 @@ resources:
 - topicKafka.yaml
 - camel-secret.yaml
 - kafka.yaml
-
+- camelUser.yaml
