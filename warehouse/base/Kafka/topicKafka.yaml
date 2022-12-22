@@ -2,8 +2,6 @@ kind: KafkaTopic
 apiVersion: kafka.strimzi.io/v1beta2
 metadata:
   name: warehouse-in
-  annotations:
-    seb.namespace: $(NAMESPACE)
   labels:
     strimzi.io/cluster: warehouse
 spec:
