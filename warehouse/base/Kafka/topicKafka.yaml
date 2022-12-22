@@ -1,9 +1,13 @@
 kind: KafkaTopic
 apiVersion: kafka.strimzi.io/v1beta2
 metadata:
-  name: warehouse-in
+  name: warehouse-$(NAMESPACE)-in
+  toto: $(NAMESPACE)
+  annotations:
+    seb.namespace: $(NAMESPACE)
   labels:
     strimzi.io/cluster: warehouse
+  namespace: $(NAMESPACE)
 spec:
   config:
     retention.ms: 604800000
@@ -12,7 +16,7 @@ spec:
 kind: KafkaTopic
 apiVersion: kafka.strimzi.io/v1beta2
 metadata:
-  name: warehouse-out
+  name: warehouse-$(NAMESPACE)-out
   labels:
     strimzi.io/cluster: warehouse
 spec:
