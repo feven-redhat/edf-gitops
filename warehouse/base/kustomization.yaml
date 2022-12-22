@@ -8,8 +8,9 @@ resources:
 - Camel/camel-secret.yaml
 - Camel/camelUser.yaml
 - Camel/kamelet.yaml
+- Camel/integration.yaml
 - Kafka/kafka.yaml
 - Kafka/mirrormakeUser.yaml
 - Kafka/mirrormaker-secret.yaml
 - Kafka/topicKafka.yaml
-- Kafka/integration.yaml
+
