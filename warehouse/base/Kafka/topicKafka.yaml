@@ -14,7 +14,7 @@ spec:
 kind: KafkaTopic
 apiVersion: kafka.strimzi.io/v1beta2
 metadata:
-  name: warehouse-$(NAMESPACE)-out
+  name: warehouse-out
   labels:
     strimzi.io/cluster: warehouse
 spec:
