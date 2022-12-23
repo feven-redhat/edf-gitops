@@ -5,7 +5,7 @@ metadata:
 spec:
   sources:
   - content: |
-      from("kamelet:mqtt-source?brokerUrl=tcp://a83e486ef703a4944992a9f612b04fd3-2043435801.us-east-2.elb.amazonaws.com:1883&topic=esp32&clientId=camel-k&username=admin&password=public")
+      from("kamelet:mqtt-source?brokerUrl=tcp://mqtt-mqtt-0-svc:1883&topic=esp32&clientId=camel-k&username=admin&password=public")
       .convertBodyTo(String.class)
       .setBody({ e -> [ id: e.in.body, timestamp: new Date().getTime() ] })
       .marshal().json()
