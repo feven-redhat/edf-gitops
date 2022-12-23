@@ -3,7 +3,7 @@ apiVersion: kafka.strimzi.io/v1beta2
 metadata:
   name: warehouse-in
   labels:
-    strimzi.io/cluster: warehouse-paris
+    strimzi.io/cluster: warehouse
 spec:
   config:
     retention.ms: 604800000
@@ -14,7 +14,7 @@ apiVersion: kafka.strimzi.io/v1beta2
 metadata:
   name: warehouse-out
   labels:
-    strimzi.io/cluster: warehouse-paris
+    strimzi.io/cluster: warehouse
 spec:
   config:
     retention.ms: 604800000

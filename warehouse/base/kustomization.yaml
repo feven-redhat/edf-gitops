@@ -1,14 +1,16 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+
 resources:
-- broker.yaml
-- AMQaddress.yaml
-- svc-mqtt-loadbalancer.yaml
-- mirrormaker-secret.yaml
-- mirrormakeUser.yaml
-- topicKafka.yaml
-- camel-secret.yaml
-- kafka.yaml
-- camelUser.yaml
-- kamelet.yaml
-- integration.yaml
+- AMQ/AMQaddress.yaml
+- AMQ/broker.yaml
+- AMQ/svc-mqtt-loadbalancer.yaml
+- Camel/camel-secret.yaml
+- Camel/camelUser.yaml
+- Camel/kamelet.yaml
+- Camel/integration.yaml
+- Kafka/kafka.yaml
+- Kafka/mirrormakeUser.yaml
+- Kafka/mirrormaker-secret.yaml
+- Kafka/topicKafka.yaml
+

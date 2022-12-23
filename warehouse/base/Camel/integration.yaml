@@ -1,0 +1,15 @@
+apiVersion: camel.apache.org/v1
+kind: Integration
+metadata:
+  name: kafkaintegration
+spec:
+  sources:
+  - content: |
+      from("kamelet:mqtt-source?brokerUrl=tcp://mqtt-mqtt-0-svc:1883&topic=esp32&clientId=camel-k&username=admin&password=public")
+      .convertBodyTo(String.class)
+      .setBody({ e -> [ id: e.in.body, timestamp: new Date().getTime() ] })
+      .marshal().json()
+      //.to("log:info")
+      .to("kamelet:kafka-sink-scram?bootstrapServers=warehouse-kafka-bootstrap:9092&user=camel&password=s3cr3t&topic=warehouse-in")
+    name: mqtt-kafka.groovy
+  traits: {}

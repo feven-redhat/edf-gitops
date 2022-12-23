@@ -4,7 +4,7 @@ kind: KafkaUser
 metadata:
   name: camel
   labels:
-    strimzi.io/cluster: warehouse-paris
+    strimzi.io/cluster: warehouse
 spec:
   authentication:
     password:
