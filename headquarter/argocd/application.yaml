@@ -7,7 +7,7 @@ spec:
   project: headquarter
   source:
     repoURL: https://github.com/RHTE-2023-Edge-Lab/rhte-gitops.git
-    targetRevision: slallemand/reorg-warehouse-manifests
+    targetRevision: main
     path: headquarter/
   destination:
     server: https://kubernetes.default.svc
