@@ -37,4 +37,4 @@ patchesJson6902:
           .setBody({ e -> [ id: e.in.body, timestamp: new Date().getTime() ] })
           .marshal().json()
           //.to("log:info")
-          .to("kamelet:kafka-sink-scram?bootstrapServers=warehouse-athens-kafka-bootstrap.warehouse-athens.svc:9092&user=camel&password=s3cr3t&topic=athens-warehouse-in")
+          .to("kamelet:kafka-sink-scram?bootstrapServers=warehouse-kafka-bootstrap:9092&user=camel&password=s3cr3t&topic=athens-warehouse-in")
