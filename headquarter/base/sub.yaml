@@ -35,10 +35,10 @@ metadata:
   name: camel-k
   namespace: openshift-operators
 spec:
-  channel: stable-1.11
+  channel: stable-1.8.2
   installPlanApproval: Automatic
   name: camel-k
-  source: community-operators
+  source: redhat-operators
   sourceNamespace: openshift-marketplace
 ---
 apiVersion: operators.coreos.com/v1alpha1
