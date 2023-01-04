@@ -26,20 +26,19 @@ spec:
   name: web-terminal
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-# ---
-# apiVersion: operators.coreos.com/v1alpha1
-# kind: Subscription
-# metadata:
-#   labels:
-#     operators.coreos.com/camel-k.openshift-operators: ""
-#   name: camel-k
-#   namespace: openshift-operators
-# spec:
-#   channel: stable-1.8.2
-#   installPlanApproval: Automatic
-#   name: camel-k
-#   source: redhat-operators
-#   sourceNamespace: openshift-marketplace
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: red-hat-camel-k
+  namespace: openshift-operators
+spec:
+  channel: 1.8.x
+  installPlanApproval: Automatic
+  name: red-hat-camel-k
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: red-hat-camel-k-operator.v1.8.2
 ---
 apiVersion: operators.coreos.com/v1alpha1
 kind: Subscription
