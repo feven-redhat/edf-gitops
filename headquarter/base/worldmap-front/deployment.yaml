@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    alpha.image.policy.openshift.io/resolve-names: '*'
+    app.openshift.io/route-disabled: "false"
+    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"worldmap-front:latest","namespace":"headquarter"},"fieldPath":"spec.template.spec.containers[?(@.name==\"worldmap-front\")].image","pause":"false"}]'
+  labels:
+    app: worldmap-front
+    app.kubernetes.io/component: worldmap-front
+    app.kubernetes.io/instance: worldmap-front
+    app.kubernetes.io/name: worldmap-front
+    app.kubernetes.io/part-of: worldmap-front
+    app.openshift.io/runtime: quarkus
+    app.openshift.io/runtime-namespace: headquarter
+  name: worldmap-front
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: worldmap-front
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: worldmap-front
+        deployment: worldmap-front
+    spec:
+      containers:
+      - image: image-registry.openshift-image-registry.svc:5000/headquarter/worldmap-front@sha256:c913d21f869ac5a5f31bb3868d31935594dc4f603ccfd312396d9a16f9e83d87
+        imagePullPolicy: Always
+        name: worldmap-front
+        ports:
+        - containerPort: 8080
+          protocol: TCP
+        - containerPort: 8443
+          protocol: TCP
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30
