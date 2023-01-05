@@ -5,10 +5,10 @@ resources:
 - ./kafka/kafka.yaml
 - ./kafka/kafka-topics.yaml
 - ./kafka/kafka-user.yaml
-#- ./worldmap-front/is.yaml
+- ./kafka-streams-shipments/kafka-topics.yaml
+- ./kafka-streams-shipments/kafka-user.yaml
+- ./kafka-streams-shipments/service.yaml
+- ./kafka-streams-shipments/statefulset.yaml
 - ./worldmap-front/deployment.yaml
 - ./worldmap-front/service.yaml
 - ./worldmap-front/route.yaml
-# - warehouse-secret.yaml
-# - warehouse-user.yaml 
-
