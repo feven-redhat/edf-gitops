@@ -10,6 +10,7 @@ For this lab, everything will be deployed in the same cluster :
 ```shell
 oc apply -f gitops/sub.yaml
 oc apply -f gitops/ns.yaml
+oc apply -f gitops/rbac.yaml
 ```
 
 ## Configure the Headquarter
