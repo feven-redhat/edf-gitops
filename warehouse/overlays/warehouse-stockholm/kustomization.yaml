@@ -37,4 +37,56 @@ patchesJson6902:
           .setBody({ e -> [ id: e.in.body, timestamp: new Date().getTime() ] })
           .marshal().json()
           //.to("log:info")
-          .to("kamelet:kafka-sink-scram?bootstrapServers=warehouse-kafka-bootstrap:9092&user=camel&password=s3cr3t&topic=stockholm-warehouse-in")
+          .to("kamelet:kafka-sink-scram?bootstrapServers=warehouse-kafka-bootstrap:9092&user=camel&password=s3cr3t&topic=stockholm-warehouse-in")- target:
+    kind: Secret
+    version: v1
+    name: "warehouse-user"
+  patch: |-
+     - op: replace
+       path: "/metadata/name"
+       value: "warehouse-stockholm-user"
+- target:
+    kind: KafkaUser
+    group: kafka.strimzi.io
+    version: v1beta2
+    name: "warehouse"
+  patch: |-
+     - op: replace
+       path: "/metadata/name"
+       value: "warehouse-stockholm"
+     - op: add
+       path: "/metadata/labels"
+       value: 
+         app.kubernetes.io/instance: warehouse-stockholm
+         strimzi.io/cluster: warehouse-stockholm
+- target:
+    kind: KafkaUser
+    group: kafka.strimzi.io
+    version: v1beta2
+    name: "camel"
+  patch: |-
+     - op: add
+       path: "/metadata/labels"
+       value: 
+         app.kubernetes.io/instance: warehouse-stockholm
+         strimzi.io/cluster: warehouse-stockholm
+- target:
+    kind: KafkaUser
+    group: kafka.strimzi.io
+    version: v1beta2
+    name: "mirrormaker"
+  patch: |-
+     - op: add
+       path: "/metadata/labels"
+       value: 
+         app.kubernetes.io/instance: warehouse-stockholm
+         strimzi.io/cluster: warehouse-stockholm
+- target:
+    kind: Kafka
+    group: kafka.strimzi.io
+    version: v1beta2
+    name: "warehouse"
+  patch: |-
+     - op: replace
+       path: "/metadata/name"
+       value: "warehouse-stockholm"

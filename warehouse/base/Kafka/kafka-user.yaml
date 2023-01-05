@@ -1,15 +1,23 @@
----
 apiVersion: kafka.strimzi.io/v1beta2
 kind: KafkaUser
 metadata:
-  name: mirrormaker
   labels:
+    app.kubernetes.io/instance: warehouse
     strimzi.io/cluster: warehouse
+  name: warehouse
 spec:
   authentication:
     password:
       valueFrom:
         secretKeyRef:
-          name: mirrormaker-user
           key: password
+          name: warehouse-paris-user
     type: scram-sha-512
+---
+apiVersion: v1
+stringData:
+  password: s3cr3t
+kind: Secret
+metadata:
+  name: warehouse-user
+type: Opaque
