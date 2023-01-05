@@ -26,7 +26,7 @@ oc apply -f headquarter/argocd/application.yaml
 
 
 
-## Configure the Warehouse
+## Configure the Warehouse (normally, not to be used as that's the target of the lab ;) )
 
 Create the argoCD warehouse project
 ```shell

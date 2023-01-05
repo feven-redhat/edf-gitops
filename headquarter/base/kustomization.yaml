@@ -12,6 +12,7 @@ resources:
 - ./camel-kafka-enricher/kafka-topics.yaml
 - ./camel-kafka-enricher/kafka-user.yaml
 - ./camel-kafka-enricher/secret.yaml
+- ./worldmap-front/secret.yaml
 - ./worldmap-front/deployment.yaml
 - ./worldmap-front/service.yaml
 - ./worldmap-front/route.yaml
