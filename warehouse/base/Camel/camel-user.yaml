@@ -5,6 +5,7 @@ metadata:
   name: camel
   labels:
     strimzi.io/cluster: warehouse
+    app.kubernetes.io/instance: warehouse
 spec:
   authentication:
     password:
