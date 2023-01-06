@@ -12,3 +12,12 @@ spec:
           name: worldmap-front
           key: password
     type: scram-sha-512
+---
+kind: Secret
+apiVersion: v1
+metadata:
+  name: worldmap-front
+stringData:
+  password: s3cr3t
+  sasl.jaas.config: org.apache.kafka.common.security.scram.ScramLoginModule required username='worldmap-front' password='s3cr3t';
+type: Opaque
