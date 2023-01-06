@@ -1,0 +1,230 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  labels:
+    strimzi.io/cluster: headquarter
+  name: warehouse-athens
+spec:
+  authentication:
+    password:
+      valueFrom:
+        secretKeyRef:
+          key: password
+          name: warehouse-athens
+    type: scram-sha-512
+---
+apiVersion: v1
+stringData:
+  password: athens
+kind: Secret
+metadata:
+  name: warehouse-athens
+type: Opaque
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  labels:
+    strimzi.io/cluster: headquarter
+  name: warehouse-brno
+spec:
+  authentication:
+    password:
+      valueFrom:
+        secretKeyRef:
+          key: password
+          name: warehouse-brno
+    type: scram-sha-512
+---
+apiVersion: v1
+stringData:
+  password: brno
+kind: Secret
+metadata:
+  name: warehouse-brno
+type: Opaque
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  labels:
+    strimzi.io/cluster: headquarter
+  name: warehouse-brussels
+spec:
+  authentication:
+    password:
+      valueFrom:
+        secretKeyRef:
+          key: password
+          name: warehouse-brussels
+    type: scram-sha-512
+---
+apiVersion: v1
+stringData:
+  password: brussels
+kind: Secret
+metadata:
+  name: warehouse-brussels
+type: Opaque
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  labels:
+    strimzi.io/cluster: headquarter
+  name: warehouse-bucharest
+spec:
+  authentication:
+    password:
+      valueFrom:
+        secretKeyRef:
+          key: password
+          name: warehouse-bucharest
+    type: scram-sha-512
+---
+apiVersion: v1
+stringData:
+  password: bucharest
+kind: Secret
+metadata:
+  name: warehouse-bucharest
+type: Opaque
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  labels:
+    strimzi.io/cluster: headquarter
+  name: warehouse-dublin
+spec:
+  authentication:
+    password:
+      valueFrom:
+        secretKeyRef:
+          key: password
+          name: warehouse-dublin
+    type: scram-sha-512
+---
+apiVersion: v1
+stringData:
+  password: dublin
+kind: Secret
+metadata:
+  name: warehouse-dublin
+type: Opaque
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  labels:
+    strimzi.io/cluster: headquarter
+  name: warehouse-lisboa
+spec:
+  authentication:
+    password:
+      valueFrom:
+        secretKeyRef:
+          key: password
+          name: warehouse-lisboa
+    type: scram-sha-512
+---
+apiVersion: v1
+stringData:
+  password: lisboa
+kind: Secret
+metadata:
+  name: warehouse-lisboa
+type: Opaque
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  labels:
+    strimzi.io/cluster: headquarter
+  name: warehouse-london
+spec:
+  authentication:
+    password:
+      valueFrom:
+        secretKeyRef:
+          key: password
+          name: warehouse-london
+    type: scram-sha-512
+---
+apiVersion: v1
+stringData:
+  password: london
+kind: Secret
+metadata:
+  name: warehouse-london
+type: Opaque
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  labels:
+    strimzi.io/cluster: headquarter
+  name: warehouse-paris
+spec:
+  authentication:
+    password:
+      valueFrom:
+        secretKeyRef:
+          key: password
+          name: warehouse-paris
+    type: scram-sha-512
+---
+apiVersion: v1
+stringData:
+  password: paris
+kind: Secret
+metadata:
+  name: warehouse-paris
+type: Opaque
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  labels:
+    strimzi.io/cluster: headquarter
+  name: warehouse-stockholm
+spec:
+  authentication:
+    password:
+      valueFrom:
+        secretKeyRef:
+          key: password
+          name: warehouse-stockholm
+    type: scram-sha-512
+---
+apiVersion: v1
+stringData:
+  password: stockholm
+kind: Secret
+metadata:
+  name: warehouse-stockholm
+type: Opaque
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  labels:
+    strimzi.io/cluster: headquarter
+  name: warehouse-varsovia
+spec:
+  authentication:
+    password:
+      valueFrom:
+        secretKeyRef:
+          key: password
+          name: warehouse-varsovia
+    type: scram-sha-512
+---
+apiVersion: v1
+stringData:
+  password: varsovia
+kind: Secret
+metadata:
+  name: warehouse-varsovia
+type: Opaque
+---
