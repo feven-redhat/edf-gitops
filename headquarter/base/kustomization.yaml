@@ -20,3 +20,6 @@ resources:
 - ./worldmap-front/deployment.yaml
 - ./worldmap-front/service.yaml
 - ./worldmap-front/route.yaml
+
+- ./mirrorMaker2/user.yaml
+- ./mirrorMaker2/mm2.yaml
