@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: camel-kafka-enricher
-        image: quay.io/rhte2023edgelab/camel-kafka-enricher:latest
+        image: quay.io/rhte2023edgelab/camel-kafka-enricher:1.0.0-SNAPSHOT
         ports:
         - containerPort: 8080
         env:
