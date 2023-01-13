@@ -13,7 +13,7 @@ type: Opaque
 kind: Secret
 apiVersion: v1
 metadata:
-  name: hq-cluster-ca-cert
+  name: headquarter-cluster-ca-cert
   labels:
     strimzi.io/cluster: headquarter
     strimzi.io/kind: Kafka
