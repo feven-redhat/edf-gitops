@@ -9,6 +9,7 @@ resources:
 - Camel/camelUser.yaml
 - Camel/kamelet.yaml
 - Camel/integration.yaml
+- Kafka/ca-cert.yaml
 - Kafka/kafka.yaml
 - Kafka/kafka-user.yaml
 - Kafka/mirrormakeUser.yaml
