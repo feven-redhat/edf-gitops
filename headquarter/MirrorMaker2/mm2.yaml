@@ -1,0 +1,312 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaMirrorMaker2
+metadata:
+  name: mm2
+spec:
+  clusters:
+    - alias: athens
+      authentication:
+        passwordSecret:
+          password: password
+          secretName: mm2-user
+        type: scram-sha-512
+        username: camel
+      bootstrapServers: >-
+        warehouse-kafka-tls-bootstrap-warehouse-athens.apps.cluster-nhnwp.nhnwp.sandbox2668.opentlc.com:443
+      tls:
+        trustedCertificates:
+          - certificate: ca.crt
+            secretName: headquarter-cluster-ca-cert
+    - alias: brno
+      authentication:
+        passwordSecret:
+          password: password
+          secretName: mm2-user
+        type: scram-sha-512
+        username: camel
+      bootstrapServers: >-
+        warehouse-kafka-tls-bootstrap-warehouse-brno.apps.cluster-nhnwp.nhnwp.sandbox2668.opentlc.com:443
+      tls:
+        trustedCertificates:
+          - certificate: ca.crt
+            secretName: headquarter-cluster-ca-cert
+    - alias: brussels
+      authentication:
+        passwordSecret:
+          password: password
+          secretName: mm2-user
+        type: scram-sha-512
+        username: camel
+      bootstrapServers: >-
+        warehouse-kafka-tls-bootstrap-warehouse-brussels.apps.cluster-nhnwp.nhnwp.sandbox2668.opentlc.com:443
+      tls:
+        trustedCertificates:
+          - certificate: ca.crt
+            secretName: headquarter-cluster-ca-cert
+    - alias: bucharest
+      authentication:
+        passwordSecret:
+          password: password
+          secretName: mm2-user
+        type: scram-sha-512
+        username: camel
+      bootstrapServers: >-
+        warehouse-kafka-tls-bootstrap-warehouse-bucharest.apps.cluster-nhnwp.nhnwp.sandbox2668.opentlc.com:443
+      tls:
+        trustedCertificates:
+          - certificate: ca.crt
+            secretName: headquarter-cluster-ca-cert
+    - alias: dublin
+      authentication:
+        passwordSecret:
+          password: password
+          secretName: mm2-user
+        type: scram-sha-512
+        username: camel
+      bootstrapServers: >-
+        warehouse-kafka-tls-bootstrap-warehouse-dublin.apps.cluster-nhnwp.nhnwp.sandbox2668.opentlc.com:443
+      tls:
+        trustedCertificates:
+          - certificate: ca.crt
+            secretName: headquarter-cluster-ca-cert
+    - alias: lisboa
+      authentication:
+        passwordSecret:
+          password: password
+          secretName: mm2-user
+        type: scram-sha-512
+        username: camel
+      bootstrapServers: >-
+        warehouse-kafka-tls-bootstrap-warehouse-lisboa.apps.cluster-nhnwp.nhnwp.sandbox2668.opentlc.com:443
+      tls:
+        trustedCertificates:
+          - certificate: ca.crt
+            secretName: headquarter-cluster-ca-cert
+    - alias: london
+      authentication:
+        passwordSecret:
+          password: password
+          secretName: mm2-user
+        type: scram-sha-512
+        username: camel
+      bootstrapServers: >-
+        warehouse-kafka-tls-bootstrap-warehouse-london.apps.cluster-nhnwp.nhnwp.sandbox2668.opentlc.com:443
+      tls:
+        trustedCertificates:
+          - certificate: ca.crt
+            secretName: headquarter-cluster-ca-cert
+    - alias: paris
+      authentication:
+        passwordSecret:
+          password: password
+          secretName: mm2-user
+        type: scram-sha-512
+        username: camel
+      bootstrapServers: >-
+        warehouse-kafka-tls-bootstrap-warehouse-paris.apps.cluster-nhnwp.nhnwp.sandbox2668.opentlc.com:443
+      tls:
+        trustedCertificates:
+          - certificate: ca.crt
+            secretName: headquarter-cluster-ca-cert
+    - alias: stockholm
+      authentication:
+        passwordSecret:
+          password: password
+          secretName: mm2-user
+        type: scram-sha-512
+        username: camel
+      bootstrapServers: >-
+        warehouse-kafka-tls-bootstrap-warehouse-stockholm.apps.cluster-nhnwp.nhnwp.sandbox2668.opentlc.com:443
+      tls:
+        trustedCertificates:
+          - certificate: ca.crt
+            secretName: headquarter-cluster-ca-cert
+    - alias: varsovia
+      authentication:
+        passwordSecret:
+          password: password
+          secretName: mm2-user
+        type: scram-sha-512
+        username: camel
+      bootstrapServers: >-
+        warehouse-kafka-tls-bootstrap-warehouse-varsovia.apps.cluster-nhnwp.nhnwp.sandbox2668.opentlc.com:443
+      tls:
+        trustedCertificates:
+          - certificate: ca.crt
+            secretName: headquarter-cluster-ca-cert
+    - alias: headquarter
+      authentication:
+        passwordSecret:
+          password: password
+          secretName: headquarter
+        type: scram-sha-512
+        username: headquarter
+      bootstrapServers: 'headquarter-kafka-bootstrap:9092'
+      config:
+        config.storage.replication.factor: 3
+        offset.storage.replication.factor: 3
+        status.storage.replication.factor: 3
+  connectCluster: headquarter
+  mirrors:
+    - sourceCluster: athens
+      checkpointConnector:
+        config:
+          checkpoints.topic.replication.factor: 2
+      groupsPattern: .*
+      heartbeatConnector:
+        config:
+          heartbeats.topic.replication.factor: 2
+      sourceConnector:
+        config:
+          offset-syncs.topic.replication.factor: 2
+          refresh.topics.interval.seconds: 30
+          replication.factor: 3
+          sync.topic.acls.enabled: 'false'
+      targetCluster: headquarter
+      topicsPattern: .*
+    - sourceCluster: brno
+      checkpointConnector:
+        config:
+          checkpoints.topic.replication.factor: 2
+      groupsPattern: .*
+      heartbeatConnector:
+        config:
+          heartbeats.topic.replication.factor: 2
+      sourceConnector:
+        config:
+          offset-syncs.topic.replication.factor: 2
+          refresh.topics.interval.seconds: 30
+          replication.factor: 3
+          sync.topic.acls.enabled: 'false'
+      targetCluster: headquarter
+      topicsPattern: .*
+    - sourceCluster: brussels
+      checkpointConnector:
+        config:
+          checkpoints.topic.replication.factor: 2
+      groupsPattern: .*
+      heartbeatConnector:
+        config:
+          heartbeats.topic.replication.factor: 2
+      sourceConnector:
+        config:
+          offset-syncs.topic.replication.factor: 2
+          refresh.topics.interval.seconds: 30
+          replication.factor: 3
+          sync.topic.acls.enabled: 'false'
+      targetCluster: headquarter
+      topicsPattern: .*
+    - sourceCluster: bucharest
+      checkpointConnector:
+        config:
+          checkpoints.topic.replication.factor: 2
+      groupsPattern: .*
+      heartbeatConnector:
+        config:
+          heartbeats.topic.replication.factor: 2
+      sourceConnector:
+        config:
+          offset-syncs.topic.replication.factor: 2
+          refresh.topics.interval.seconds: 30
+          replication.factor: 3
+          sync.topic.acls.enabled: 'false'
+      targetCluster: headquarter
+      topicsPattern: .*
+    - sourceCluster: dublin
+      checkpointConnector:
+        config:
+          checkpoints.topic.replication.factor: 2
+      groupsPattern: .*
+      heartbeatConnector:
+        config:
+          heartbeats.topic.replication.factor: 2
+      sourceConnector:
+        config:
+          offset-syncs.topic.replication.factor: 2
+          refresh.topics.interval.seconds: 30
+          replication.factor: 3
+          sync.topic.acls.enabled: 'false'
+      targetCluster: headquarter
+      topicsPattern: .*
+    - sourceCluster: lisboa
+      checkpointConnector:
+        config:
+          checkpoints.topic.replication.factor: 2
+      groupsPattern: .*
+      heartbeatConnector:
+        config:
+          heartbeats.topic.replication.factor: 2
+      sourceConnector:
+        config:
+          offset-syncs.topic.replication.factor: 2
+          refresh.topics.interval.seconds: 30
+          replication.factor: 3
+          sync.topic.acls.enabled: 'false'
+      targetCluster: headquarter
+      topicsPattern: .*
+    - sourceCluster: london
+      checkpointConnector:
+        config:
+          checkpoints.topic.replication.factor: 2
+      groupsPattern: .*
+      heartbeatConnector:
+        config:
+          heartbeats.topic.replication.factor: 2
+      sourceConnector:
+        config:
+          offset-syncs.topic.replication.factor: 2
+          refresh.topics.interval.seconds: 30
+          replication.factor: 3
+          sync.topic.acls.enabled: 'false'
+      targetCluster: headquarter
+      topicsPattern: .*
+    - sourceCluster: paris
+      checkpointConnector:
+        config:
+          checkpoints.topic.replication.factor: 2
+      groupsPattern: .*
+      heartbeatConnector:
+        config:
+          heartbeats.topic.replication.factor: 2
+      sourceConnector:
+        config:
+          offset-syncs.topic.replication.factor: 2
+          refresh.topics.interval.seconds: 30
+          replication.factor: 3
+          sync.topic.acls.enabled: 'false'
+      targetCluster: headquarter
+      topicsPattern: .*
+    - sourceCluster: stockholm
+      checkpointConnector:
+        config:
+          checkpoints.topic.replication.factor: 2
+      groupsPattern: .*
+      heartbeatConnector:
+        config:
+          heartbeats.topic.replication.factor: 2
+      sourceConnector:
+        config:
+          offset-syncs.topic.replication.factor: 2
+          refresh.topics.interval.seconds: 30
+          replication.factor: 3
+          sync.topic.acls.enabled: 'false'
+      targetCluster: headquarter
+      topicsPattern: .*
+    - sourceCluster: varsovia
+      checkpointConnector:
+        config:
+          checkpoints.topic.replication.factor: 2
+      groupsPattern: .*
+      heartbeatConnector:
+        config:
+          heartbeats.topic.replication.factor: 2
+      sourceConnector:
+        config:
+          offset-syncs.topic.replication.factor: 2
+          refresh.topics.interval.seconds: 30
+          replication.factor: 3
+          sync.topic.acls.enabled: 'false'
+      targetCluster: headquarter
+      topicsPattern: .*
+  replicas: 1
+  version: 3.2.3
