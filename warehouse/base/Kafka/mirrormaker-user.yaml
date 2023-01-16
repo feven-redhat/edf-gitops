@@ -11,6 +11,6 @@ spec:
     password:
       valueFrom:
         secretKeyRef:
-          name: mirrormaker-user
+          name: mm2-user
           key: password
     type: scram-sha-512
