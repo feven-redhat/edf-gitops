@@ -10,7 +10,7 @@ spec:
           password: password
           secretName: mm2-user
         type: scram-sha-512
-        username: camel
+        username: mm2
       bootstrapServers: >-
         warehouse-kafka-tls-bootstrap-warehouse-athens.apps.cluster-7sfzs.7sfzs.sandbox1644.opentlc.com:443
       tls:
@@ -23,7 +23,7 @@ spec:
           password: password
           secretName: mm2-user
         type: scram-sha-512
-        username: camel
+        username: mm2
       bootstrapServers: >-
         warehouse-kafka-tls-bootstrap-warehouse-brno.apps.cluster-7sfzs.7sfzs.sandbox1644.opentlc.com:443
       tls:
@@ -36,7 +36,7 @@ spec:
           password: password
           secretName: mm2-user
         type: scram-sha-512
-        username: camel
+        username: mm2
       bootstrapServers: >-
         warehouse-kafka-tls-bootstrap-warehouse-brussels.apps.cluster-7sfzs.7sfzs.sandbox1644.opentlc.com:443
       tls:
@@ -49,7 +49,7 @@ spec:
           password: password
           secretName: mm2-user
         type: scram-sha-512
-        username: camel
+        username: mm2
       bootstrapServers: >-
         warehouse-kafka-tls-bootstrap-warehouse-bucharest.apps.cluster-7sfzs.7sfzs.sandbox1644.opentlc.com:443
       tls:
@@ -62,7 +62,7 @@ spec:
           password: password
           secretName: mm2-user
         type: scram-sha-512
-        username: camel
+        username: mm2
       bootstrapServers: >-
         warehouse-kafka-tls-bootstrap-warehouse-dublin.apps.cluster-7sfzs.7sfzs.sandbox1644.opentlc.com:443
       tls:
@@ -75,7 +75,7 @@ spec:
           password: password
           secretName: mm2-user
         type: scram-sha-512
-        username: camel
+        username: mm2
       bootstrapServers: >-
         warehouse-kafka-tls-bootstrap-warehouse-lisboa.apps.cluster-7sfzs.7sfzs.sandbox1644.opentlc.com:443
       tls:
@@ -88,7 +88,7 @@ spec:
           password: password
           secretName: mm2-user
         type: scram-sha-512
-        username: camel
+        username: mm2
       bootstrapServers: >-
         warehouse-kafka-tls-bootstrap-warehouse-london.apps.cluster-7sfzs.7sfzs.sandbox1644.opentlc.com:443
       tls:
@@ -101,7 +101,7 @@ spec:
           password: password
           secretName: mm2-user
         type: scram-sha-512
-        username: camel
+        username: mm2
       bootstrapServers: >-
         warehouse-kafka-tls-bootstrap-warehouse-paris.apps.cluster-7sfzs.7sfzs.sandbox1644.opentlc.com:443
       tls:
@@ -114,7 +114,7 @@ spec:
           password: password
           secretName: mm2-user
         type: scram-sha-512
-        username: camel
+        username: mm2
       bootstrapServers: >-
         warehouse-kafka-tls-bootstrap-warehouse-stockholm.apps.cluster-7sfzs.7sfzs.sandbox1644.opentlc.com:443
       tls:
@@ -127,7 +127,7 @@ spec:
           password: password
           secretName: mm2-user
         type: scram-sha-512
-        username: camel
+        username: mm2
       bootstrapServers: >-
         warehouse-kafka-tls-bootstrap-warehouse-varsovia.apps.cluster-7sfzs.7sfzs.sandbox1644.opentlc.com:443
       tls:
