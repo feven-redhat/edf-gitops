@@ -83,12 +83,3 @@ patchesJson6902:
        value: 
          app.kubernetes.io/instance: warehouse-stockholm
          strimzi.io/cluster: warehouse-stockholm
-- target:
-    kind: Kafka
-    group: kafka.strimzi.io
-    version: v1beta2
-    name: "warehouse"
-  patch: |-
-     - op: replace
-       path: "/metadata/name"
-       value: "warehouse-stockholm"
