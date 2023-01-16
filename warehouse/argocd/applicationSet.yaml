@@ -24,7 +24,7 @@ spec:
       project: warehouse
       source:
         repoURL: https://github.com/RHTE-2023-Edge-Lab/rhte-gitops.git
-        targetRevision: alegros-testings
+        targetRevision: main
         path: warehouse/base
       destination:
         server: https://kubernetes.default.svc
@@ -35,6 +35,3 @@ spec:
         automated:
           selfHeal: true
           prune: true
-#        managedNamespaceMetadata:
-#          labels:
-#            argocd.argoproj.io/managed-by: openshift-gitops
