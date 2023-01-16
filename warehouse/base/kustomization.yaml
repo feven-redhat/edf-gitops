@@ -6,12 +6,11 @@ resources:
 - AMQ/broker.yaml
 - AMQ/svc-mqtt-loadbalancer.yaml
 - Camel/camel-secret.yaml
-- Camel/camelUser.yaml
+- Camel/camel-user.yaml
 - Camel/kamelet.yaml
-- Camel/integration.yaml
+- Camel/integration-in.yaml
+- Camel/integration-out.yaml
 - Kafka/kafka.yaml
 - Kafka/kafka-user.yaml
-- Kafka/mirrormakeUser.yaml
 - Kafka/mirrormaker-secret.yaml
 - Kafka/topicKafka.yaml
-

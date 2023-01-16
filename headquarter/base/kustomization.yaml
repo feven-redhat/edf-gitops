@@ -1,6 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+- ./kafka/ca-cert.yaml
 - ./kafka/kafka.yaml
 - ./kafka/kafka-topics.yaml
 - ./kafka/warehouse-users.yaml
@@ -11,7 +12,6 @@ resources:
 - ./kafka-streams-shipments/statefulset.yaml
 
 - ./camel-kafka-enricher/deployment.yaml
-- ./camel-kafka-enricher/kafka-topics.yaml
 - ./camel-kafka-enricher/kafka-user.yaml
 - ./camel-kafka-enricher/secret.yaml
 
@@ -19,3 +19,6 @@ resources:
 - ./worldmap-front/deployment.yaml
 - ./worldmap-front/service.yaml
 - ./worldmap-front/route.yaml
+
+- ./mirrorMaker2/user.yaml
+- ./mirrorMaker2/mm2.yaml

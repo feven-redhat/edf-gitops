@@ -3,6 +3,8 @@ kind: Kafka
 metadata:
   name: warehouse
 spec:
+  clusterCa:
+    generateCertificateAuthority: false
   kafka:
     config:
       offsets.topic.replication.factor: 3

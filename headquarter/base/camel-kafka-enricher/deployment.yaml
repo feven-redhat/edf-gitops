@@ -14,10 +14,13 @@ spec:
     spec:
       containers:
       - name: camel-kafka-enricher
-        image: quay.io/rhte2023edgelab/camel-kafka-enricher:latest
+        image: quay.io/rhte2023edgelab/camel-kafka-enricher:1.0.0-SNAPSHOT
         ports:
         - containerPort: 8080
+        resources: {}
         env:
+        - name: kafka-client.allow.auto.create.topics
+          value: "false"
         - name: SMALLRYE_CONFIG_LOCATIONS
           value: /etc/camel-kafka-enricher/application.properties
         - name: ENRICHER_KAFKA_JAAS_CONFIG
