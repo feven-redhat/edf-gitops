@@ -4,14 +4,11 @@ metadata:
   annotations:
     controller.devfile.io/allow-import-from: '*'
     web-terminal.redhat.com/unmanaged-state: "true"
-  creationTimestamp: "2023-01-09T20:29:13Z"
   generation: 4
   labels:
     console.openshift.io/terminal: "true"
   name: web-terminal-tooling
   namespace: headquarter
-  resourceVersion: "163915"
-  uid: 4cf4092b-eed7-4f3f-8e83-cba2e5518981
 spec:
   components:
   - container:
