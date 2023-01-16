@@ -36,4 +36,4 @@ replacements:
       version: v1beta2
       name: mm2
     fieldPaths:
-    - spec.clusters[alias=athens].bootstrapServers
+    - spec.clusters.*.bootstrapServers
