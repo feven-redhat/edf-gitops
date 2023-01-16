@@ -22,3 +22,5 @@ resources:
 - ./worldmap-front/route.yaml
 - ./mirrorMaker2/user.yaml
 - ./mirrorMaker2/mm2.yaml
+
+- ./terminal/DevWorkspaceTemplate.yaml
