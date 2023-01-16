@@ -8,7 +8,7 @@ metadata:
   labels:
     console.openshift.io/terminal: "true"
   name: web-terminal-tooling
-  namespace: headquarter
+  namespace: openshift-operators
 spec:
   components:
   - container:
