@@ -12,5 +12,6 @@ resources:
 - Camel/integration-out.yaml
 - Kafka/kafka.yaml
 - Kafka/mirrormaker-secret.yaml
+- Kafka/mirrormaker-user.yaml
 - Kafka/topicKafka.yaml
 - Kafka/ca-cert.yaml
