@@ -1,7 +1,7 @@
 kind: Secret
 apiVersion: v1
 metadata:
-  name: headquarter-cluster-ca
+  name: warehouse-cluster-ca
   labels:
     strimzi.io/cluster: warehouse
     strimzi.io/kind: Kafka
@@ -13,7 +13,7 @@ type: Opaque
 kind: Secret
 apiVersion: v1
 metadata:
-  name: headquarter-cluster-ca-cert
+  name: warehouse-cluster-ca-cert
   labels:
     strimzi.io/cluster: warehouse
     strimzi.io/kind: Kafka
