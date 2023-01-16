@@ -22,18 +22,18 @@ resources:
 - ./worldmap-front/route.yaml
 - ./mirrorMaker2/user.yaml
 - ./mirrorMaker2/mm2.yaml
-- ./mirrorMaker2/bootstrapurls.yaml
+#- ./mirrorMaker2/bootstrapurls.yaml
 
-replacements:
-- source:
-    name: myconfig
-    kind: ConfigMap
-    fieldPath: data.url
-  targets:
-  - select:
-      kind: KafkaMirrorMaker2
-      group: kafka.strimzi.io
-      version: v1beta2
-      name: mm2
-    fieldPaths:
-    - spec.clusters.*.bootstrapServers
+# replacements:
+# - source:
+#     name: myconfig
+#     kind: ConfigMap
+#     fieldPath: data.url
+#   targets:
+#   - select:
+#       kind: KafkaMirrorMaker2
+#       group: kafka.strimzi.io
+#       version: v1beta2
+#       name: mm2
+#     fieldPaths:
+#     - spec.clusters.*.bootstrapServers
