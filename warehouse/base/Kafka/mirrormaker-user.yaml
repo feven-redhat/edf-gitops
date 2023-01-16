@@ -2,7 +2,7 @@
 apiVersion: kafka.strimzi.io/v1beta2
 kind: KafkaUser
 metadata:
-  name: mm2-user
+  name: mm2
   labels:
     strimzi.io/cluster: warehouse
     app.kubernetes.io/instance: warehouse
