@@ -9,6 +9,9 @@ rules:
 - apiGroups: ["camel.apache.org"]
   resources: ["*"]
   verbs: ["*"]
+- apiGroups: ["workspace.devfile.io"]
+  resources: ["*"]
+  verbs: ["*"]
 ---
 kind: ClusterRoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
