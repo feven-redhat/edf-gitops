@@ -115,12 +115,12 @@ roleRef:
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: lisboa-team
-  namespace: warehouse-lisboa
+  name: london-team
+  namespace: warehouse-london
 subjects:
   - kind: User
     apiGroup: rbac.authorization.k8s.io
-    name: lisboa-team
+    name: london-team
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
