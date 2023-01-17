@@ -6,7 +6,7 @@ metadata:
   namespace: openshift-config
 data:
   htpasswd: >-
-    YXRoZW5zLXRlYW06JDJ5JDA1JHZrT2FDYXUwZzRyeTZDVi9qTUtnUGUxMzdBbkp5ZG9OWUZIZmFvUlZDb3pFaWhpQ1pBYi95CmJybm8tdGVhbTokMnkkMDUkYnEzUk03bmZJY3RnTHhjTDdWVnNQdU0zRllURlo2M1BKT3ZHSkRwYXNTaG51dzM0ak9FeC4KYnJ1c3NlbHMtdGVhbTokMnkkMDUkSXFNc0Z5b29xZ250YXZqb04xbXlnT21SZHBIb1B1dUI2dUNMeXBrcTdZTHFkR0lKbjJPTUMKYnVjaGFyZXN0LXRlYW06JDJ5JDA1JC5IYi9Hc2VLckdsNHhhRWRDSUJtZmVNZjZMTnBlTk1EVnJMaG1uYXlnSi5SR2JQYnU0RFpxCmR1Ymxpbi10ZWFtOiQyeSQwNSRUalBkdjFjN2Z4Y0ZhaW5WQzJFTWEuQTlmLk94VGwxQ0ZqNmg5TjZQczFNTllaVFB3SkNtRwpsaXNib2EtdGVhbTokMnkkMDUkTEhTem5CalBQTkVUdUN5eFgzYkRULnNEUUV5YlduZVJDdzlCYllTaUhTZlEuZEpyLy4yd0MKbG9uZG9uLXRlYW06JDJ5JDA1JElCSVo3djhxalRzTW1sM3MueVFNcU9yc3pSNlpuZ3ZmQkdHYVJQc3dSQTR6YWpmT1ZNcEcuCnBhcmlzLXRlYW06JDJ5JDA1JE5KdVA1bjVYc0llVGVjSEpkdWRYZC5VOHVTNFVISnZBU3BKT241L1VyNGU0N0V2UVJWS05LCnN0b2Nrb2xtLXRlYW06JDJ5JDA1JHVBdnFaQkdtakdwazFaY2RBNEZVZ09GcXhRUGR6U1RJVm1MYWsyeHVNb3Y1MHZXWVpDWG91CnZhcnNvdmlhLXRlYW06JDJ5JDA1JG04MUo0WWNydVRjaGNaSmNDWWhCa09KOE53Z1dwWDZTa09zN0pSU0Q1V1NLNGNaNmNSaTV1
+    YXRoZW5zLXRlYW06JDJ5JDA1JEZjdThYQWNqaU5lSnV1R2VJdmxSS3V2dFVQWWhCb052c3hMdG1sTE1hNmVlUjU0OUtvTWhXCmJybm8tdGVhbTokMnkkMDUkckkuWUs2ZjloWS5DYUhvMEZldGNOZS93S3guZjQ1aU9GMjZzS2J2eml5Wm43SHgwRTY1WUMKYnJ1c3NlbHMtdGVhbTokMnkkMDUkSWljY2F2alM2Ry5lbjFlOHpSdS8vZWsyLkdJcVA1TWd4bUt6aC5RekFiNEh5cXR2S2wwbTYKYnVjaGFyZXN0LXRlYW06JDJ5JDA1JGQuQnZGcjYwUUFUcFJYOE1wWC5UTi51ZTR5a2RvWmNkZy5FL3BNcjkwUEM3LzQxaC5LeTcuCmR1Ymxpbi10ZWFtOiQyeSQwNSRlbmpSajFSYkRIaHQ3S002RkdPRjl1RXVMTjFOSFdzLzNncU5ramJBTlVvT2xNdWticFM0cQpsaXNib2EtdGVhbTokMnkkMDUkc3U2LlgxNGE3S292REp3SFdkUVBFZW1uem9BVmN3aTdwUGE2YjducFZFVnZGaFBnUXdudy4KbG9uZG9uLXRlYW06JDJ5JDA1JFNvVkhET1ZoU3ZiVFRFV2l1d3RoVHVMQjhsWVNkNktQZzJqZFF1M1dZcEV4QWg1Mkx4YlZhCnBhcmlzLXRlYW06JDJ5JDA1JFlGUEpZckNrNUFUVGlTY1pxeDByMXV6d0FrbVNqazNubG85cUREaVdkamtLeFJrMmxTOUtDCnZhcnNvdmlhLXRlYW06JDJ5JDA1JEVLTVptTzhRbTdsNjN2cEx2OVNCby45bUJNRDVzWnE0ZVkxUFB2NUhHYWIzQkdYTDYub3VTCnN0b2NraG9sbS10ZWFtOiQyeSQwNSRjRHluUDVFWnRCTmFuUXQ5Y2kzWkt1Q1c2MVU2bHN6Q1U2bi9LcFNyVXE2VjVJWVNZVEtTZQo=
 type: Opaque
 ---
 apiVersion: config.openshift.io/v1
@@ -115,12 +115,12 @@ roleRef:
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: lisboa-team
-  namespace: warehouse-lisboa
+  name: london-team
+  namespace: warehouse-london
 subjects:
   - kind: User
     apiGroup: rbac.authorization.k8s.io
-    name: lisboa-team
+    name: london-team
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -143,12 +143,12 @@ roleRef:
 kind: RoleBinding
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
-  name: stockolm-team
-  namespace: warehouse-stockolm
+  name: stockholm-team
+  namespace: warehouse-stockholm
 subjects:
   - kind: User
     apiGroup: rbac.authorization.k8s.io
-    name: stockolm-team
+    name: stockholm-team
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
