@@ -1,0 +1,23 @@
+---
+kind: Secret
+apiVersion: v1
+metadata:
+  name: htpasswd-rhte
+  namespace: openshift-config
+data:
+  htpasswd: >-
+    YXRoZW5zLXRlYW06JDJ5JDA1JHZrT2FDYXUwZzRyeTZDVi9qTUtnUGUxMzdBbkp5ZG9OWUZIZmFvUlZDb3pFaWhpQ1pBYi95CmJybm8tdGVhbTokMnkkMDUkYnEzUk03bmZJY3RnTHhjTDdWVnNQdU0zRllURlo2M1BKT3ZHSkRwYXNTaG51dzM0ak9FeC4KYnJ1c3NlbHMtdGVhbTokMnkkMDUkSXFNc0Z5b29xZ250YXZqb04xbXlnT21SZHBIb1B1dUI2dUNMeXBrcTdZTHFkR0lKbjJPTUMKYnVjaGFyZXN0LXRlYW06JDJ5JDA1JC5IYi9Hc2VLckdsNHhhRWRDSUJtZmVNZjZMTnBlTk1EVnJMaG1uYXlnSi5SR2JQYnU0RFpxCmR1Ymxpbi10ZWFtOiQyeSQwNSRUalBkdjFjN2Z4Y0ZhaW5WQzJFTWEuQTlmLk94VGwxQ0ZqNmg5TjZQczFNTllaVFB3SkNtRwpsaXNib2EtdGVhbTokMnkkMDUkTEhTem5CalBQTkVUdUN5eFgzYkRULnNEUUV5YlduZVJDdzlCYllTaUhTZlEuZEpyLy4yd0MKbG9uZG9uLXRlYW06JDJ5JDA1JElCSVo3djhxalRzTW1sM3MueVFNcU9yc3pSNlpuZ3ZmQkdHYVJQc3dSQTR6YWpmT1ZNcEcuCnBhcmlzLXRlYW06JDJ5JDA1JE5KdVA1bjVYc0llVGVjSEpkdWRYZC5VOHVTNFVISnZBU3BKT241L1VyNGU0N0V2UVJWS05LCnN0b2Nrb2xtLXRlYW06JDJ5JDA1JHVBdnFaQkdtakdwazFaY2RBNEZVZ09GcXhRUGR6U1RJVm1MYWsyeHVNb3Y1MHZXWVpDWG91CnZhcnNvdmlhLXRlYW06JDJ5JDA1JG04MUo0WWNydVRjaGNaSmNDWWhCa09KOE53Z1dwWDZTa09zN0pSU0Q1V1NLNGNaNmNSaTV1
+type: Opaque
+---
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  name: cluster
+spec:
+  identityProviders:
+    - htpasswd:
+        fileData:
+          name: htpasswd-rhte
+      mappingMethod: claim
+      name: htpasswd
+      type: HTPasswd
