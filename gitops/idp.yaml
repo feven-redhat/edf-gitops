@@ -17,7 +17,13 @@ spec:
   identityProviders:
     - htpasswd:
         fileData:
+          name: htpasswd-secret
+      mappingMethod: claim
+      name: htpasswd_provider
+      type: HTPasswd
+    - htpasswd:
+        fileData:
           name: htpasswd-rhte
       mappingMethod: claim
-      name: htpasswd
+      name: htpasswd_rhte
       type: HTPasswd
