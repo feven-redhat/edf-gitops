@@ -27,3 +27,143 @@ spec:
       mappingMethod: claim
       name: htpasswd_rhte
       type: HTPasswd
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: athens-team
+  namespace: warehouse-athens
+subjects:
+  - kind: User
+    apiGroup: rbac.authorization.k8s.io
+    name: athens-team
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: brno-team
+  namespace: warehouse-brno
+subjects:
+  - kind: User
+    apiGroup: rbac.authorization.k8s.io
+    name: brno-team
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: brussels-team
+  namespace: warehouse-brussels
+subjects:
+  - kind: User
+    apiGroup: rbac.authorization.k8s.io
+    name: brussels-team
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: bucharest-team
+  namespace: warehouse-bucharest
+subjects:
+  - kind: User
+    apiGroup: rbac.authorization.k8s.io
+    name: bucharest-team
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: dublin-team
+  namespace: warehouse-dublin
+subjects:
+  - kind: User
+    apiGroup: rbac.authorization.k8s.io
+    name: dublin-team
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: lisboa-team
+  namespace: warehouse-lisboa
+subjects:
+  - kind: User
+    apiGroup: rbac.authorization.k8s.io
+    name: lisboa-team
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: lisboa-team
+  namespace: warehouse-lisboa
+subjects:
+  - kind: User
+    apiGroup: rbac.authorization.k8s.io
+    name: lisboa-team
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: paris-team
+  namespace: warehouse-paris
+subjects:
+  - kind: User
+    apiGroup: rbac.authorization.k8s.io
+    name: paris-team
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: stockolm-team
+  namespace: warehouse-stockolm
+subjects:
+  - kind: User
+    apiGroup: rbac.authorization.k8s.io
+    name: stockolm-team
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: varsovia-team
+  namespace: warehouse-varsovia
+subjects:
+  - kind: User
+    apiGroup: rbac.authorization.k8s.io
+    name: varsovia-team
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: admin
