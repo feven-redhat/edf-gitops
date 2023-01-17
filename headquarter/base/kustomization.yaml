@@ -4,7 +4,6 @@ resources:
 - ./kafka/ca-cert.yaml
 - ./kafka/kafka.yaml
 - ./kafka/kafka-topics.yaml
-- ./kafka/warehouse-users.yaml
 
 - ./kafka-streams-shipments/kafka-topics.yaml
 - ./kafka-streams-shipments/kafka-user.yaml
