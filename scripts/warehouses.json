@@ -1,0 +1,12 @@
+[
+{"id":"warehouse-athens"   , "mqtt":"a4453f372edc54418b01b7195fc90233-1777581340.eu-central-1.elb.amazonaws.com"},
+{"id":"warehouse-brno"     , "mqtt":"aeee02d5e8a88403f9061be1848336bc-1593615669.eu-central-1.elb.amazonaws.com"},
+{"id":"warehouse-brussels" , "mqtt":"ad58330a95d3a4968a7ff9de833e4610-1486870521.eu-central-1.elb.amazonaws.com"},
+{"id":"warehouse-bucharest", "mqtt":"a65dd966e4f6d47188c712d0297b5750-2112851896.eu-central-1.elb.amazonaws.com"},
+{"id":"warehouse-dublin"   , "mqtt":"ad21621b9967841bebd32acd8864d4dc-1361732482.eu-central-1.elb.amazonaws.com"},
+{"id":"warehouse-lisboa"   , "mqtt":"a80c2d1f2ec49416caa2bd8ab70c4fa8-1059758133.eu-central-1.elb.amazonaws.com"},
+{"id":"warehouse-london"   , "mqtt":"aa4906f0672ac474d9756ad9486af86b-2146266042.eu-central-1.elb.amazonaws.com"},
+{"id":"warehouse-paris"    , "mqtt":"a4c0fb7b46c3040a29b0562bf437859c-2072485025.eu-central-1.elb.amazonaws.com"},
+{"id":"warehouse-stockholm", "mqtt":"a9fd575f76e1a4910af49a5c8a168952-464446387.eu-central-1.elb.amazonaws.com"},
+{"id":"warehouse-varsovia" , "mqtt":"afc8900da4b9045eb8b83837f6ed56e6-675009736.eu-central-1.elb.amazonaws.com"}
+]
