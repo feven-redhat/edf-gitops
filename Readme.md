@@ -30,6 +30,8 @@ oc apply -f headquarter/argocd/application.yaml
 
 ## Configure the Warehouse (normally, not to be used as that's the target of the lab ;) )
 
+### All Namespaces
+
 Create the argoCD warehouse project
 ```shell
 oc apply -f warehouse/argocd/project.yaml
@@ -38,5 +40,12 @@ oc apply -f warehouse/argocd/project.yaml
 Create the argoCD ApplicationSet (as we are deploying 10 or more namespaces within the cluster)
 ```shell
 oc apply -f warehouse/argocd/applicationSet.yaml
+```
+
+### Hack without argocd
+
+Deploy only in a particular namespace if a team need the solution
+```shell
+oc -n <NAMESPACE> apply -k warehouse/base/
 ```
 
