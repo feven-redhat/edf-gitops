@@ -12,6 +12,7 @@ oc apply -f gitops/sub.yaml
 oc apply -f gitops/ns.yaml
 oc apply -f gitops/rbac.yaml
 oc apply -f gitops/idp.yaml
+oc delete clusterrolebinding self-provisioners
 ```
 
 ## Configure the Headquarter
