@@ -10,7 +10,6 @@ For this lab, everything will be deployed in the same cluster :
 ```shell
 oc apply -f gitops/sub.yaml
 oc apply -f gitops/ns.yaml
-oc apply -f gitops/rbac.yaml
 oc apply -f gitops/idp.yaml
 oc delete clusterrolebinding self-provisioners
 ```
@@ -50,3 +49,11 @@ Deploy only in a particular namespace if a team need the solution
 oc -n <NAMESPACE> apply -k warehouse/base/
 ```
 
+## Clean the warehouses
+
+```shell
+oc delete -f warehouse/argocd/applicationSet.yaml
+oc delete $(oc get ns -oname | grep warehouse-*)
+oc apply -f gitops/ns.yaml
+oc apply -f gitops/idp.yaml
+```
