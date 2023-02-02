@@ -12,7 +12,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-athens.apps.cluster-ggg9r.ggg9r.sandbox1465.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-athens.apps.cluster-5t9gs.5t9gs.sandbox744.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -25,7 +25,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-brno.apps.cluster-ggg9r.ggg9r.sandbox1465.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-brno.apps.cluster-5t9gs.5t9gs.sandbox744.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -38,7 +38,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-brussels.apps.cluster-ggg9r.ggg9r.sandbox1465.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-brussels.apps.cluster-5t9gs.5t9gs.sandbox744.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -51,7 +51,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-bucharest.apps.cluster-ggg9r.ggg9r.sandbox1465.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-bucharest.apps.cluster-5t9gs.5t9gs.sandbox744.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -64,7 +64,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-dublin.apps.cluster-ggg9r.ggg9r.sandbox1465.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-dublin.apps.cluster-5t9gs.5t9gs.sandbox744.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -77,7 +77,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-lisboa.apps.cluster-ggg9r.ggg9r.sandbox1465.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-lisboa.apps.cluster-5t9gs.5t9gs.sandbox744.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -90,7 +90,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-london.apps.cluster-ggg9r.ggg9r.sandbox1465.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-london.apps.cluster-5t9gs.5t9gs.sandbox744.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -103,7 +103,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-paris.apps.cluster-ggg9r.ggg9r.sandbox1465.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-paris.apps.cluster-5t9gs.5t9gs.sandbox744.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -116,7 +116,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-stockholm.apps.cluster-ggg9r.ggg9r.sandbox1465.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-stockholm.apps.cluster-5t9gs.5t9gs.sandbox744.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -129,7 +129,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-varsovia.apps.cluster-ggg9r.ggg9r.sandbox1465.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-varsovia.apps.cluster-5t9gs.5t9gs.sandbox744.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
