@@ -15,5 +15,5 @@ spec:
   - group: '*'
     kind: '*'
   sourceRepos:
-  - https://github.com/RHTE-2023-Edge-Lab/rhte-gitops.git
+  - https://github.com/edf-gitops/rhte-gitops.git
 status: {}
