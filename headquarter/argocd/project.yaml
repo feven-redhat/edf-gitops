@@ -15,5 +15,5 @@ spec:
   - group: '*'
     kind: '*'
   sourceRepos:
-  - https://github.com/edf-gitops/rhte-gitops.git
+  - https://github.com/feven-redhat/edf-gitops.git
 status: {}
