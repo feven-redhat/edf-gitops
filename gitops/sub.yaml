@@ -64,3 +64,34 @@ spec:
   name: amq-streams
   source: redhat-operators
   sourceNamespace: openshift-marketplace
+#openshift-serverless
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: serverless-operator-group
+  namespace: openshift-serverless
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: serverless-operator
+  namespace: openshift-serverless
+spec:
+  channel: stable
+  installPlanApproval: Automatic
+  name: serverless-operator
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+---
+apiVersion: operator.knative.dev/v1beta1
+kind: KnativeServing
+metadata:
+  name: knative-serving
+  namespace: knative-serving
+---
+apiVersion: operator.knative.dev/v1beta1
+kind: KnativeEventing
+metadata:
+  name: knative-eventing
+  namespace: knative-eventing

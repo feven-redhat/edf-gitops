@@ -75,3 +75,22 @@ metadata:
   name: warehouse-varsovia
   labels:
     argocd.argoproj.io/managed-by: openshift-gitops
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/display-name: "Red Hat OpenShift Serverless"
+  labels:
+    openshift.io/cluster-monitoring: 'true'
+  name: openshift-serverless
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: knative-serving
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: knative-eventing

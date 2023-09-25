@@ -1,0 +1,1 @@
+{"clusterName":"edf-demo","clusterID":"642f9862-8bb6-49b6-8a44-2f87527c3f67","infraID":"edf-demo-8gp6z","aws":{"region":"us-east-2","identifier":[{"kubernetes.io/cluster/edf-demo-8gp6z":"owned"},{"openshiftClusterID":"642f9862-8bb6-49b6-8a44-2f87527c3f67"}],"clusterDomain":"edf-demo.sandbox1880.opentlc.com"}}
