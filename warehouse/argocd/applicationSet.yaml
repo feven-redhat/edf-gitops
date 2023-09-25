@@ -23,7 +23,7 @@ spec:
     spec:
       project: warehouse
       source:
-        repoURL: https://github.com/RHTE-2023-Edge-Lab/rhte-gitops.git
+        repoURL: https://github.com/feven-redhat/edf-gitops.git
         targetRevision: main
         path: warehouse/base
       destination:
