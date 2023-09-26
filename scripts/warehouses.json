@@ -1,12 +1,12 @@
 [
-{"id":"warehouse-athens"   , "mqtt":"a116ea8c21b9046e7a3c8cd2845a39bb-189738842.us-east-2.elb.amazonaws.com"},
-{"id":"warehouse-brno"     , "mqtt":"af01d136a02274c1e8ca4d5cbf353af7-734629985.us-east-2.elb.amazonaws.com"},
-{"id":"warehouse-brussels" , "mqtt":"acb3765491cf640df8e55d18394f2322-709734352.us-east-2.elb.amazonaws.com"},
-{"id":"warehouse-bucharest", "mqtt":"a50986ded0f6b4d32990a5f644f64811-1676055380.us-east-2.elb.amazonaws.com"},
-{"id":"warehouse-dublin"   , "mqtt":"a5131ff1438be4dbcaecd73e3cf593eb-409911591.us-east-2.elb.amazonaws.com"},
-{"id":"warehouse-lisboa"   , "mqtt":"a06678a0a35bb4056be025864b0296fc-1918903566.us-east-2.elb.amazonaws.com"},
-{"id":"warehouse-london"   , "mqtt":"a3fbb6a3e226847888eec2de04c4a0f6-1398201824.us-east-2.elb.amazonaws.com"},
-{"id":"warehouse-paris"    , "mqtt":"a8e286bbbb8734a799162402d968ca4d-1300448806.us-east-2.elb.amazonaws.com"},
-{"id":"warehouse-stockholm", "mqtt":"af2332d9222e84c4bb78d5e481bbcfbf-1610656767.us-east-2.elb.amazonaws.com"},
-{"id":"warehouse-varsovia" , "mqtt":"add7fd62a3cda477c9a753992ce62a0b-127271752.us-east-2.elb.amazonaws.com"}
+{"id":"warehouse-athens"   , "mqtt":"a64edbd7185a146f3acb0f88e88913ac-1764399169.us-east-2.elb.amazonaws.com"},
+{"id":"warehouse-brno"     , "mqtt":"a6d932b9d8069499581587a39248f72f-968979013.us-east-2.elb.amazonaws.com"},
+{"id":"warehouse-brussels" , "mqtt":"a251f2f99c102428fa6e3227d5adeb03-1677667459.us-east-2.elb.amazonaws.com"},
+{"id":"warehouse-bucharest", "mqtt":"aa07d33a50d8740989e323acb60fe361-249167585.us-east-2.elb.amazonaws.com"},
+{"id":"warehouse-dublin"   , "mqtt":"a734ab26e44cb4278b919195439ed4a8-66191940.us-east-2.elb.amazonaws.com"},
+{"id":"warehouse-lisboa"   , "mqtt":"a998190bc8dd242bda1d8235ac6cbad3-1369801099.us-east-2.elb.amazonaws.com"},
+{"id":"warehouse-london"   , "mqtt":"a7979adb765bb4c669a32753a56e408b-1617115572.us-east-2.elb.amazonaws.com"},
+{"id":"warehouse-paris"    , "mqtt":"a96d7e90f868b4d97af46542dc4c051a-1594780292.us-east-2.elb.amazonaws.com"},
+{"id":"warehouse-stockholm", "mqtt":"a7e408b50a0b14fe8bf540fa31a68cce-993238099.us-east-2.elb.amazonaws.com"},
+{"id":"warehouse-varsovia" , "mqtt":"afd799c0d35fb4d6c979ddff6504c2ac-1895177538.us-east-2.elb.amazonaws.com"}
 ]

@@ -1,0 +1,43 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: worldmap-front
+  namespace: headquarter
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/minScale: "0"
+        autoscaling.knative.dev/maxScale: "10"
+    spec:
+      containers:
+      - image: quay.io/rhte2023edgelab/worldmap-front:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: KAFKA_BOOTSTRAP_SERVERS
+          value: headquarter-kafka-bootstrap:9092
+        - name: MP_MESSAGING_CONNECTOR_SMALLRYE_KAFKA_SECURITY_PROTOCOL
+          value: SASL_PLAINTEXT
+        - name: MP_MESSAGING_CONNECTOR_SMALLRYE_KAFKA_SASL_MECHANISM
+          value: SCRAM-SHA-512
+        - name: MP_MESSAGING_CONNECTOR_SMALLRYE_KAFKA_SASL_JAAS_CONFIG
+          valueFrom:
+            secretKeyRef:
+              name: worldmap-front
+              key: sasl.jaas.config
+        - name: MP_MESSAGING_INCOMING_SHIPMENTS_TOPIC
+          value: headquarter-shipment-records
+        resources:
+          limits:
+            memory: 512Mi
+            cpu: 1000m
+        livenessProbe:
+          httpGet:
+            path: /q/health/live
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 15
+          successThreshold: 1
+          timeoutSeconds: 20
+

@@ -68,7 +68,7 @@ spec:
     - "camel:kamelet"
   template:
     from:
-      uri: "knative:endpoint/source"
+      uri: "kamelet:source"
       steps:
       - choice:
           when:
