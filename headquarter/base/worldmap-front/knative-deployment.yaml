@@ -11,7 +11,7 @@ spec:
         autoscaling.knative.dev/maxScale: "10"
     spec:
       containers:
-      - image: quay.io/rhte2023edgelab/worldmap-front:latest
+      - image: default-route-openshift-image-registry.apps.edf-serverless.sandbox2750.opentlc.com/openshift/my-hello-world:v1
         ports:
         - containerPort: 8080
         env:
