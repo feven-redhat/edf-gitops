@@ -12,7 +12,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-athens.apps.edf-demo.sandbox1880.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-athens.apps.edf-serverless.sandbox2750.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -25,7 +25,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-brno.apps.edf-demo.sandbox1880.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-brno.apps.edf-serverless.sandbox2750.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -38,7 +38,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-brussels.apps.edf-demo.sandbox1880.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-brussels.apps.edf-serverless.sandbox2750.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -51,7 +51,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-bucharest.apps.edf-demo.sandbox1880.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-bucharest.apps.edf-serverless.sandbox2750.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -64,7 +64,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-dublin.apps.edf-demo.sandbox1880.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-dublin.apps.edf-serverless.sandbox2750.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -77,7 +77,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-lisboa.apps.edf-demo.sandbox1880.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-lisboa.apps.edf-serverless.sandbox2750.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -90,7 +90,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-london.apps.edf-demo.sandbox1880.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-london.apps.edf-serverless.sandbox2750.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -103,7 +103,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-paris.apps.edf-demo.sandbox1880.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-paris.apps.edf-serverless.sandbox2750.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -116,7 +116,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-stockholm.apps.edf-demo.sandbox1880.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-stockholm.apps.edf-serverless.sandbox2750.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
@@ -129,7 +129,7 @@ spec:
         type: scram-sha-512
         username: mm2
       bootstrapServers: >-
-        warehouse-kafka-tls-bootstrap-warehouse-varsovia.apps.edf-demo.sandbox1880.opentlc.com:443
+        warehouse-kafka-tls-bootstrap-warehouse-varsovia.apps.edf-serverless.sandbox2750.opentlc.com:443
       tls:
         trustedCertificates:
           - certificate: ca.crt
